@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "UTF-8">
+<head >
+	<meta charset="utf-8">
+
+	<link href="../static/css/bootstrap.css" rel="Stylesheet">
+	<link href="../static/css/result.css" rel="Stylesheet">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<title>SCHOLAR DREAMER</title>
+</head>
+<body>
+	<div class="row uptitle">
+          <div class="col-xs-6 col-sm-4"></div>
+          <div class="col-xs-6 col-sm-4">
+             <div class="col-sm-4"><a href="{{url_for('index')}}" style="text-decoration:none"> Scholarship</a></div>
+             <div class="col-sm-4"><a href="{{url_for('about')}}" style="text-decoration:none">About us</a></div>
+             <div class="col-sm-4"><a href="{{url_for('report')}}" style="text-decoration:none">Report</a></div>
+             <div class="col-xs-6 col-sm-4"></div>
+         </div>
+    </div>
+
+<div id="img">
+		<img src="../static/img/result.png" width="15%"/>
+	</div>
+
+	<!-- 
+    <div class="container">
+
+        <h1 class="page-header">Pricing Table</h1>
+
+
+        <p>&nbsp;</p>
+ -->
+     <div class="container">
+         {% if result %}
+            {% for list in result %}
+            <div class="col-lg-3 col-md-3 col-xs-6 row flat">
+                <ul class="plan plan1">
+                    <li class="plan-name">
+                        {{ list.name }}
+                    </li>
+                    <li>
+                        <strong>성적조건</strong> {{list.grade_conditions}}
+                    </li>
+                    <li>
+                        <strong> 지역 </strong> {{list.area_state}} {{list.area_city}}
+                    </li>
+                    <li>
+                        <strong> 지역조건 </strong> {{list.region}}
+                    </li>
+                    <li>
+                        <strong>소득조건</strong> {{list.income}}
+                    </li>
+                    <li>
+                        <strong>주의사항</strong> {{list.notes}}
+                    </li>
+                    {%if list.homepage%}
+                    <li class="plan-action">
+                        <a href="{{list.homepage}}" class="btn btn-default btn-lg">자세히보기</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            
+    	{% endfor %}
+    	{% endif %}
+    </div> <!-- /container -->
+
+<div id="footer">
+  <div class="container"></div>
+
+
+
+</body>
+</html>

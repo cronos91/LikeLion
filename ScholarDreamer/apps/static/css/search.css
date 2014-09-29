@@ -1,0 +1,36 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {
+	background-color: #f0f0f0;
+	color: #000000;
+	font-family: 'Nanum Gothic';
+}
+#grade{
+	margin-top : 3%;
+	font-size : 1em;
+}
+
+#searchdeco{
+	margin-top : 3%;
+}
+#location{
+
+    margin-top : 3%;
+
+}
+
+.uptitle{
+
+	margin-top : 1%;
+}
+
+div a{
+
+	color : #585858;
+
+}
+
+button{
+	margin-left : 20%;
+	margin-top : 5%;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <link href="../static/css/bootstrap.css" rel="Stylesheet">
+    <link href="../static/css/report.css" rel="Stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery.bgswitcher.js"></script>
+
+
+    <title></title>
+</head>
+<body>
+
+    <body scroll=auto style="overflow-x:hidden">
+       <div class="row uptitle">
+          <div class="col-xs-6 col-sm-4"></div>
+          <div class="col-xs-6 col-sm-4">
+             <div class="col-sm-4"><a href="{{url_for('search')}}" style="text-decoration:none"> Scholarship</div>
+             <div class="col-sm-4"><a href="{{url_for('about')}}" style="text-decoration:none">About us</a></div>
+             <div class="col-sm-4"style="text-decoration:none" >Report</a></div>
+             <div class="col-xs-6 col-sm-4"></div>
+         </div>
+
+
+         <!-- Contact -->
+
+         <section id="contact">
+            <div class="container" style = " margin-top : 4%">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading"> 
+                            <img src="../static/img/img.png" width="4%"/>    Contact Us</h2>
+                            <h5 class="section-subheading text-muted">SCHOLAR DREAMER에게 수정사항과 의견을 보내주세요.</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+
+                            <form name="sentMessage" id="contactForm" action="{{url_for('report')}}" method="post" novalidate>
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" required data-validation-required-message="Please enter your name.">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" required data-validation-required-message="Please enter your email address.">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" name="phone" required data-validation-required-message="Please enter your phone number.">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <textarea style="height : 130px" class="form-control" placeholder="Your Message *" id="message" name="message" required data-validation-required-message="Please enter a message."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="submit">
+                                    <div class="col-xs-offset-4">
+                                        <button type="submit" class="btn btn-xl">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form JavaScript -->
+            <script src="js/jqBootstrapValidation.js"></script>
+            <script src="js/contact_me.js"></script>
+
+
+
+        </body>
+        </html>

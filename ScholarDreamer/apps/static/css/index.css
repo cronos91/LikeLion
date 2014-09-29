@@ -1,0 +1,40 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+body{
+	background-color: #f0f0f0;
+	text-align : center;
+	font-family: 'Nanum Gothic';
+}
+
+
+#logo img{
+	margin-top : 10%;
+	height: auto;
+	margin-bottom : 1%;
+}
+
+#description {
+	margin-top : -7%;
+	font-size : 1em;
+	letter-spacing: 1.8px;
+	word-spacing : 2.5px;
+	color : #FFFFFF;
+}
+
+#findnow{
+	margin-top : 4%;
+}
+#copyright{
+	margin-top : 14%;
+}
+
+
+div a{
+	color : #676b78;
+
+}
+
+div a:hover{
+	color: white;
+}
